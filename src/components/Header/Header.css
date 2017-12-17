@@ -1,0 +1,1020 @@
+
+/* Reset =================================================== */
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: bottom;
+  background: transparent;
+}
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+/* Variables =================================================== */
+/* Mixins =================================================== */
+.clearfix,
+section,
+.row {
+  *zoom: 1;
+}
+.clearfix:before,
+section:before,
+.row:before,
+.clearfix:after,
+section:after,
+.row:after {
+  display: table;
+  content: "";
+}
+.clearfix:after,
+section:after,
+.row:after {
+  clear: both;
+}
+/* Effects =================================================== */
+/* Animate all */
+.animate,
+.top,
+header nav li a,
+.thumbs li {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+/* Animate color */
+.animate-color,
+footer a {
+  -webkit-transition: color .3s;
+  -moz-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s;
+}
+/* Animate opacity */
+.animate-opacity,
+.social a,
+.logo,
+.contact a {
+  -webkit-transition: opacity .3s;
+  -moz-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+}
+/* Rounded corners top only */
+.rounded-top,
+.bar-chart li {
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+}
+/* Text Shadow */
+.text-shadow-black,
+.bar-chart .percent,
+.bar-chart .skill,
+a.button,
+.submit {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+}
+.text-shadow-white,
+.bar-chart .label,
+.concept,
+.header-center h3 {
+  text-shadow: 0px 1px 1px #ffffff;
+}
+.shadow {
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+/* Helpers =================================================== */
+.align-c {
+  text-align: center !important;
+}
+.align-l {
+  text-align: left !important;
+}
+.align-r {
+  text-align: right !important;
+}
+.nopad-t {
+  padding-top: 0 !important;
+}
+.nopad-b {
+  padding-bottom: 0 !important;
+}
+.nopad {
+  padding: 0 !important;
+}
+.margin-b {
+  margin-bottom: 80px !important;
+}
+.margin-bs {
+  margin-bottom: 25px !important;
+}
+.nomargin {
+  margin: 0 !important;
+}
+.left {
+  float: left !important;
+}
+.right {
+  float: right !important;
+}
+span.text-wide {
+  display: none;
+}
+.pad {
+  text-align: left;
+  padding: 25px 0px;
+  padding-bottom: 0px;
+}
+.pad.side {
+  padding: 0px;
+}
+/* Page =================================================== */
+html {
+  background: #FFFFFF;
+  font-size: 62.5%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  background-color: transparent;
+  font-size: 18px;
+  font-size: 1.8rem;
+  color: #111111;
+  text-rendering: optimizeLegibility;
+}
+header {
+  background: #111;
+  height: 62px;
+  padding: 0 5%;
+  width: 90%;
+  position: absolute;
+  z-index: 1000;
+  font-family: "proxima nova", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  /* Navigation */
+}
+header nav {
+  display: none;
+  background: #222;
+  position: absolute;
+  top: 62px;
+  right: 0px;
+  z-index: 1000;
+  width: 100%;
+  font-size: 24px;
+  font-size: 2.4rem;
+  text-align: center;
+}
+header nav li {
+  height: 3em;
+  list-style: none;
+  display: block;
+  border-top: #212121 solid 1px;
+  border-bottom: #363636 solid 1px;
+}
+header nav li a {
+  display: block;
+  color: #FFF;
+  line-height: 2.8em;
+  text-decoration: none;
+}
+header nav li a:active {
+  background: #333;
+}
+.logo {
+  height: 62px;
+  width: 40px;
+  background: url(../../../src/images/sprite-mobile.png) 0px -63px no-repeat;
+  display: block;
+  text-indent: -9999px;
+  float: left;
+}
+.logo:hover {
+  opacity: 0.5;
+}
+.icon-nav {
+  width: 27px;
+  height: 62px;
+  float: right;
+  background: url(../../../src/images/sprite-mobile.png) -42px -63px no-repeat;
+  display: block;
+  text-indent: -9999px;
+}
+.icon-nav.active {
+  opacity: 0.5;
+}
+.social {
+  display: none;
+}
+.content {
+  margin-top: 62px;
+}
+footer {
+  background: #f5f5f5;
+  height: 50px;
+  padding: 40px 5% 0 5%;
+  color: #666666;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: "proxima nova", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  text-align: center;
+  position: relative;
+  -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+footer nav {
+  display: none;
+}
+footer .right {
+  display: none;
+}
+footer .left {
+  float: none !important;
+}
+footer .left a {
+  text-decoration: none;
+}
+footer .gradient-white {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: -50px;
+  left: 0px;
+  background-color: rgba(255, 255, 255, 0);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ffffff), color-stop(1, rgba(255, 255, 255, 0)));
+  background-image: -ms-linear-gradient(bottom, #ffffff, rgba(255, 255, 255, 0));
+  /*background-image: -webkit-linear-gradient(bottom, @start, @stop);*/
+  background-image: -moz-linear-gradient(center bottom, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(bottom, #ffffff, rgba(255, 255, 255, 0));
+}
+footer a.top {
+  background: transparent url(../../../src/images/sprite.png) 0 -217px;
+  width: 118px;
+  height: 90px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -59px;
+  bottom: -40px;
+  text-indent: -9999px;
+}
+footer a:hover.top {
+  bottom: -35px;
+}
+footer a {
+  color: #666666;
+}
+footer a:hover {
+  color: #333333;
+}
+h1,
+.h1,
+h2,
+.h2 {
+  margin: 0;
+  color: #111111;
+  text-rendering: optimizelegibility;
+  font-weight: normal;
+}
+h1,
+.h1 {
+  margin-bottom: 0.1em;
+  font-size: 48px;
+  font-size: 4.8rem;
+  line-height: 1.2em;
+  font-family: "neosans regular", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  letter-spacing: -0.07em;
+}
+.portfolio h1 {
+  font-size: 32px;
+  font-size: 3.2rem;
+  font-family: "proxima nova light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  border-bottom: #DDD solid 1px;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.1em;
+  letter-spacing: -0.01em;
+}
+h2,
+.h2 {
+  margin-bottom: 0.5em;
+  font-size: 28px;
+  font-size: 2.8rem;
+  line-height: 1.2em;
+}
+h3,
+.h3 {
+  padding-top: 1em;
+  margin-bottom: 0.4em;
+  /*text-transform: uppercase;*/
+  font-size: 20px;
+  font-size: 2rem;
+  font-family: "proxima nova", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-weight: 600;
+}
+p {
+  margin-bottom: 1.4em;
+  line-height: 1.4em;
+  /*-webkit-font-smoothing: antialiased;*/
+}
+p.intro {
+  font-size: 25px;
+  font-size: 2.5rem;
+  color: #666666;
+  line-height: 1.3em;
+  margin-bottom: 0.7em;
+  clear: both;
+}
+p.quote-author {
+  color: #666666;
+  margin-top: -0.5em;
+}
+p.author {
+  color: #666666;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+p.author .date {
+  /*display: block;*/
+  float: right;
+}
+.strong,
+strong {
+  font-family: "proxima nova", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+  font-weight: 600;
+}
+a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #333333;
+}
+a:hover,
+a:active {
+  color: #0d0d0d;
+}
+/* Centered header with line */
+.header-center {
+  height: 1px;
+  background: #DDD;
+  border-bottom: #FFF solid 1px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.header-center h3 {
+  background: #fafafa;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  text-align: center;
+  display: block;
+  color: #666666;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+  padding: 0px;
+}
+/* Change default text selection colour */
+::selection {
+  background: #333333;
+  color: #FFF;
+}
+::-moz-selection {
+  background: #333333;
+  color: #FFF;
+}
+::-webkit-selection {
+  background: #333333;
+  color: #FFF;
+}
+ul.ul,
+ol.ol {
+  list-style-type: disc;
+  padding-left: 2em;
+  margin-bottom: 1.4em;
+  line-height: 1.4em;
+}
+ul.ul li,
+ol.ol li {
+  margin-bottom: 0.7em;
+}
+.text-light {
+  color: #666666;
+}
+.text-center {
+  margin: auto;
+  margin-bottom: 3em;
+  max-width: 40em;
+}
+.text-center.nomargin {
+  margin: 0 auto 0 auto !important;
+}
+.text-center p:last-child {
+  margin-bottom: 0;
+}
+.line {
+  width: 100%;
+  height: 1px;
+  background: #DDD;
+  border-bottom: #FFF solid 1px;
+  clear: both;
+  margin-bottom: 50px;
+}
+
+/* Sections */
+section.light,
+section.main {
+  overflow: hidden;
+  border-top: #FFF solid 1px;
+  padding: 3em 1.5em;
+}
+section.dark,
+section.noise {
+  background: #fafafa;
+  border-bottom: #dddddd solid 1px;
+  padding: 3em 1.5em;
+}
+section.dark {
+  -webkit-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+}
+section.noise {
+  border: none;
+}
+section.main {
+  background: none;
+  border: none;
+}
+section.light {
+  -webkit-box-shadow: inset 0px 30px 30px -30px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0px 30px 30px -30px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0px 30px 30px -30px rgba(0, 0, 0, 0.05);
+  border-bottom: #dddddd solid 1px;
+}
+.portfolio .content-detail .row {
+  clear: both;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.portfolio .content-detail .row.alt [class^="col-"] {
+  float: right;
+  margin: 0 0 0 3.84615385%;
+}
+.portfolio .content-detail [class^="col-"] {
+  float: left;
+  margin: 0 3.84615385% 0 0;
+  list-style: none;
+  position: relative;
+}
+.portfolio .content-detail [class^="col-"]:last-child,
+.portfolio .content-detail .row.alt [class^="col-"]:last-child {
+  margin-right: 0;
+}
+.portfolio .content-detail .col-3 {
+  width: 48.0769230769%;
+}
+.portfolio .content-detail .col-3:nth-child(2) {
+  margin-right: 0;
+}
+.portfolio .content-detail .col-6 {
+  width: 100%;
+  margin-right: 0;
+}
+.portfolio .content-detail .col-12 {
+  width: 100%;
+  margin-right: 0;
+}
+#content-detail section:last-child,
+.contact section:last-child {
+  /*padding-bottom: @padlarge * 2;*/
+}
+.home section.light {
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+#content-detail {
+  position: relative;
+}
+img {
+  max-width: 100%;
+  position: relative;
+  margin-bottom: 2em;
+}
+img.major {
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+img.last {
+  margin-bottom: 3em;
+}
+img.shadow {
+  border: #DDD solid 1px;
+}
+/* snaps */
+.snaps {
+  border-top: #dddddd 1px solid;
+  padding-top: 3em;
+  max-width: 540px;
+  margin: auto;
+}
+.snaps a {
+  margin: 2% 3% 2% 3%;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  padding: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+.snaps a img {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  width: 100px;
+  margin-bottom: 0;
+}
+.snaps a:hover {
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.4);
+}
+/* Social Disc Icons */
+.social-disc {
+  list-style-type: none;
+  margin-top: 1.5em;
+}
+.social-disc li {
+  height: 50px;
+  margin-bottom: 0.7em;
+}
+.social-disc li a {
+  padding-left: 60px;
+  line-height: 50px;
+  display: block;
+  height: 50px;
+  background: url(../../../src/images/sprite.png) no-repeat;
+  text-decoration: none;
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+.social-disc li a.facebook {
+  background-position: 0px -547px;
+  color: #43609c;
+}
+.social-disc li a.twitter {
+  background-position: 0px -598px;
+  color: #5fc5ec;
+}
+.social-disc li a.dribbble {
+  background-position: 0px -649px;
+  color: #eb528d;
+}
+.social-disc li a.linkedin {
+  background-position: 0px -700px;
+  color: #0982c0;
+}
+.social-disc li a:hover {
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  -webkit-opacity: 0.7;
+  opacity: 0.7;
+}
+/* Favicons */
+.favicons {
+  padding: 1em 0 0 0;
+}
+.favicons li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 1% 1% 0;
+  width: 100%;
+}
+.favicons li a {
+  padding-left: 26px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  display: block;
+  overflow: hidden;
+  background: url(/../../../src/images/sprite-favicons.png) no-repeat;
+}
+.favicons li .line-25 {
+  background-position: 0px 0px;
+}
+.favicons li .abduzeedo {
+  background-position: 0px -16px;
+}
+.favicons li .awwwards {
+  background-position: 0px -32px;
+}
+.favicons li .css-mania {
+  background-position: 0px -48px;
+}
+.favicons li .design-inspiration {
+  background-position: 0px -64px;
+}
+.favicons li .specky-boy {
+  background-position: 0px -80px;
+}
+.favicons li .wdl {
+  background-position: 0px -96px;
+}
+.favicons li .underworld-mag {
+  background-position: 0px -112px;
+}
+.favicons li .onetrapixel {
+  background-position: 0px -128px;
+}
+.favicons li .vandelay {
+  background-position: 0px -144px;
+}
+.favicons li .two-experts {
+  background-position: 0px -160px;
+}
+.favicons li .denzo-mag {
+  background-position: 0px -176px;
+}
+.favicons li .six-revisions {
+  background-position: 0px -192px;
+}
+.favicons li .smashing-geeks {
+  background-position: 0px -208px;
+}
+.favicons li .noupe {
+  background-position: 0px -224px;
+}
+.favicons li .womtec {
+  background-position: 0px -240px;
+}
+.favicons li .t3n {
+  background-position: 0px -256px;
+}
+.favicons li .eyes-on-pixel {
+  background-position: 0px -272px;
+}
+.favicons li .q-index {
+  background-position: 0px -288px;
+}
+.favicons li .css-wow {
+  background-position: 0px -304px;
+}
+.favicons li .css-mayo {
+  background-position: 0px -320px;
+}
+.favicons li .most-inspired {
+  background-position: 0px -336px;
+}
+.favicons li .css-based {
+  background-position: 0px -352px;
+}
+.favicons li .css-perk {
+  background-position: 0px -368px;
+}
+.favicons li .css-brigit {
+  background-position: 0px -384px;
+}
+.favicons li .css-gallery {
+  background-position: 0px -400px;
+}
+.favicons li .siiimple {
+  background-position: 0px -416px;
+}
+.favicons li .swd {
+  background-position: 0px -432px;
+}
+.favicons li .css-smooth-operator {
+  background-position: 0px -448px;
+}
+.favicons li .colorgorize {
+  background-position: 0px -464px;
+}
+.favicons li .css-line {
+  background-position: 0px -480px;
+}
+.favicons li .folio-focus {
+  background-position: 0px -496px;
+}
+.favicons li .css-design-awards {
+  background-position: 0px -512px;
+}
+.favicons li .karachi-corner {
+  background-position: 0px -528px;
+}
+.favicons li .css-brat {
+  background-position: 0px -544px;
+}
+.favicons li .gdj {
+  background-position: 0px -560px;
+}
+.favicons li .web-geekly {
+  background-position: 0px -576px;
+}
+.favicons li .design-deck {
+  background-position: 0px -592px;
+}
+.favicons li .arnaud {
+  background-position: 0px -608px;
+}
+.favicons li .underworld-mag {
+  background-position: 0px -624px;
+}
+.favicons li .beautiful-2 {
+  background-position: 0px -640px;
+}
+.favicons li .web-appers {
+  background-position: 0px -656px;
+}
+.favicons li .damn-digital {
+  background-position: 0px -672px;
+}
+.favicons li .inspire-first {
+  background-position: 0px -688px;
+}
+.favicons li .marked-lines {
+  background-position: 0px -704px;
+}
+.favicons li .92-pixels {
+  background-position: 0px -720px;
+}
+.favicons li .psd-collector {
+  background-position: 0px -736px;
+}
+.favicons li .com-limao {
+  background-position: 0px -752px;
+}
+.favicons li .art-spire {
+  background-position: 0px -768px;
+}
+.favicons li .acris-design {
+  background-position: 0px -784px;
+}
+.favicons li .e-junkie {
+  background-position: 0px -800px;
+}
+.favicons li .design-on-stop {
+  background-position: 0px -816px;
+}
+.favicons li .design-work {
+  background-position: 0px -832px;
+}
+.favicons li .trip-wire-mag {
+  background-position: 0px -848px;
+}
+.favicons li .e-consultancy {
+  background-position: 0px -864px;
+}
+.favicons li .dj-designer-lab {
+  background-position: 0px -880px;
+}
+.favicons li .css-gallery-pro {
+  background-position: 0px -896px;
+}
+.favicons li .ildp {
+  background-position: 0px -912px;
+}
+.favicons li .omega-imagine {
+  background-position: 0px -928px;
+}
+.favicons li .3lancer {
+  background-position: 0px -944px;
+}
+.favicons li .curiosando {
+  background-position: 0px -960px;
+}
+.favicons li .dwdb {
+  background-position: 0px -976px;
+}
+.favicons li .fish-be-cat {
+  background-position: 0px -992px;
+}
+.favicons li .kachibito {
+  background-position: 0px -1008px;
+}
+.favicons li .artatm {
+  background-position: 0px -1024px;
+}
+.favicons li .blue-blots {
+  background-position: 0px -1040px;
+}
+.favicons li .super-dit {
+  background-position: 0px -1056px;
+}
+.favicons li .css-awards {
+  background-position: 0px -1072px;
+}
+.favicons li .diego-burmudez {
+  background-position: 0px -1088px;
+}
+.favicons li .my-desy {
+  background-position: 0px -1104px;
+}
+.favicons li .edumac {
+  background-position: 0px -1120px;
+}
+.favicons li .demortalz {
+  background-position: 0px -1136px;
+}
+.favicons li .down-graf {
+  background-position: 0px -1152px;
+}
+.favicons li .noil {
+  background-position: 0px -1168px;
+}
+.favicons li .land-of-web {
+  background-position: 0px -1184px;
+}
+.favicons li .iguoguo {
+  background-position: 0px -1200px;
+}
+.favicons li .land-of-web {
+  background-position: 0px -1216px;
+}
+.favicons li .i-am-designing {
+  background-position: 0px -1232px;
+}
+.favicons li .smashing-journal {
+  background-position: 0px -1248px;
+}
+.favicons li .tuts-list {
+  background-position: 0px -1264px;
+}
+.favicons li .web-rockets-mag {
+  background-position: 0px -1280px;
+}
+.favicons li .andres-zenteno {
+  background-position: 0px -1296px;
+}
+.favicons li .top-design-mag {
+  background-position: 0px -1312px;
+}
+.favicons li .inspiration-mix {
+  background-position: 0px -1328px;
+}
+.favicons li .farbwolke {
+  background-position: 0px -1344px;
+}
+.favicons li .design-relexion {
+  background-position: 0px -1360px;
+}
+.favicons li .design-idol {
+  background-position: 0px -1376px;
+}
+.favicons li .design-your-way {
+  background-position: 0px -1392px;
+}
+.favicons li .wdc {
+  background-position: 0px -1408px;
+}
+.favicons li .design-beep {
+  background-position: 0px -1424px;
+}
+.favicons li .creattica {
+  background-position: 0px -1440px;
+}
+/* Pie Chart */
+.pie-chart {
+  text-align: center;
+}
+.pie-chart ul {
+  list-style-type: none;
+  padding: 0;
+}
+.pie-chart .designer,
+.pie-chart .coder {
+  float: none;
+  margin-bottom: 3em;
+}
+/* Bar Chart */
+#bar-chart {
+  display: none;
+}
+/* Ten things list */
+.ten-things {
+  text-align: center;
+}
+.ten-things ul {
+  list-style-type: none;
+  padding: 0;
+}
+/* Portfolio Thumbs */
+.thumbs {
+  list-style: none;
+  position: relative;
+  padding: 0;
+  /* Show the 3rd item at the bottom of the page */
+}
+.thumbs li {
+  float: none;
+  margin: 0 0 1.5em 0;
+  background: #FFF;
+  padding: 5% 5% 0 5%;
+  position: relative;
+  display: block;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
