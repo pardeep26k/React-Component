@@ -24,22 +24,14 @@ ReactDOM.render(<Toggle />, document.getElementById('toggle'));
 ReactDOM.render(<Signup />, document.getElementById('login'));
 ReactDOM.render(<ToDo />, document.getElementById('todo'));
 ReactDOM.render(<Form />, document.getElementById('form'));
-ReactDOM.render(<Header />, document.getElementById('root'));
-ReactDOM.render(<Search />, document.getElementById('container'));
-*/
-const Product=[
-			  {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
-			  {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
-			  {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
-			  {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
-			  {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
-			  {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'},
-			  {category: 'Mechanic', price: '$999.99', stocked: false, name: 'Drill'},
-			  {category: 'Mechanic', price: '$199.99', stocked: false, name: 'Jet'},
-			  {category: 'Mechanic', price: '$109.99', stocked: true, name: 'Machine'}
-			];
-//ReactDOM.render(<Search products={Product} />, document.getElementById('search'));
+ReactDOM.render(<Header />, document.getElementById('root'));*/
 ReactDOM.render(<TicTac />, document.getElementById('tictac'));
+
+axios.get('/data.json')
+      .then((res) => {
+       ReactDOM.render(<Search products={res.data} />, document.getElementById('search'));
+      });
+  
 
 
      
